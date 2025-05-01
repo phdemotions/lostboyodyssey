@@ -1,5 +1,4 @@
-/* Import font */
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Space+Grotesk:wght@400;700&display=swap');
 
 * {
   margin: 0;
@@ -8,22 +7,23 @@
 }
 
 body {
-  font-family: 'DotGothic16', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   background: linear-gradient(to bottom, #0b001a, #1c0033);
   color: #f0f0f0;
   display: flex;
   min-height: 100vh;
   overflow-x: hidden;
+  line-height: 1.6;
 }
 
-/* --- Loading screen --- */
+/* Loading screen */
 #loading-screen {
   position: fixed;
   inset: 0;
   background: black;
   color: #ff8dd0;
   font-size: 1.2rem;
-  font-family: 'Press Start 2P', monospace;
+  font-family: 'DotGothic16', sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -52,7 +52,7 @@ body {
   to { opacity: 0; visibility: hidden; }
 }
 
-/* --- Sidebar --- */
+/* Sidebar */
 .sidebar {
   position: fixed;
   left: 0;
@@ -63,6 +63,7 @@ body {
   border-right: 2px solid #ff8dd0;
   padding: 1rem;
   z-index: 100;
+  font-family: 'DotGothic16', sans-serif;
 }
 
 .sidebar h1 {
@@ -93,11 +94,11 @@ body {
   transform: translateX(4px);
 }
 
-/* --- Main Content --- */
+/* Main content */
 main {
   margin-left: 240px;
   padding: 2rem;
-  width: 100%;
+  width: calc(100% - 240px);
 }
 
 section {
@@ -107,7 +108,8 @@ section {
 }
 
 h2 {
-  font-size: 0.8rem;
+  font-family: 'DotGothic16', sans-serif;
+  font-size: 1rem;
   color: #8deaff;
   margin-bottom: 1rem;
 }
@@ -119,7 +121,7 @@ h2 {
   text-align: center;
 }
 
-/* --- Mobile Adjustments --- */
+/* Responsive */
 @media (max-width: 768px) {
   body {
     flex-direction: column;
@@ -128,6 +130,7 @@ h2 {
   .sidebar {
     width: 100%;
     height: auto;
+    position: relative;
     border-right: none;
     border-bottom: 2px solid #ff8dd0;
     text-align: center;
@@ -146,9 +149,10 @@ h2 {
   main {
     margin-left: 0;
     padding: 1rem;
+    width: 100vw;
   }
 
   body, h2, .sidebar a {
-    font-size: 0.5rem;
+    font-size: 0.7rem;
   }
 }
