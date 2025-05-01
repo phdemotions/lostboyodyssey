@@ -8,7 +8,7 @@
 }
 
 body {
-  font-family: 'Press Start 2P', monospace;
+  font-family: 'DotGothic16', sans-serif;
   background: linear-gradient(to bottom, #0b001a, #1c0033);
   color: #f0f0f0;
   display: flex;
